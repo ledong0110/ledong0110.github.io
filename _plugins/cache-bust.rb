@@ -43,7 +43,13 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # Compiled CSS is generated after HTML rendering. Hash its source inputs,
+      # rather than a generated file or the old, nonexistent assets/_sass path.
+      source = @context.registers[:site].source
+      inputs = Dir.glob(File.join(source, '_sass', '**', '*.scss')).sort
+      inputs += ['assets/css/main.scss', '_config.yml'].map { |path| File.join(source, path) }
+      digest = Digest::MD5.hexdigest(inputs.map { |path| File.read(path) }.join)
+      "#{file_name}?#{digest}"
     end
   end
 end
