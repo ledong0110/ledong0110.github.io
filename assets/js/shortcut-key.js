@@ -1,11 +1,16 @@
-// Check if the user is on a Mac and update the shortcut key for search accordingly
-document.addEventListener("readystatechange", () => {
-  if (document.readyState === "interactive") {
-    let isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
-    let shortcutKeyElement = document.querySelector("#search-toggle .nav-link");
-    if (shortcutKeyElement && isMac) {
-      // use the unicode for command key
-      shortcutKeyElement.innerHTML = '&#x2318; k <i class="ti ti-search"></i>';
-    }
+(() => {
+  const updateShortcut = () => {
+    const button = document.querySelector('#search-toggle');
+    const label = button?.querySelector('.nav-link');
+    if (!label) return;
+    const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
+    label.innerHTML = `${isMac ? '⌘' : 'Ctrl'} K <i class="ti ti-search" aria-hidden="true"></i>`;
+    button.setAttribute('aria-label', `Search (${isMac ? 'Command' : 'Control'} K)`);
+    button.setAttribute('aria-keyshortcuts', isMac ? 'Meta+K' : 'Control+K');
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateShortcut, { once: true });
+  } else {
+    updateShortcut();
   }
-});
+})();

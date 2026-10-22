@@ -1,0 +1,12 @@
+<dialog id="site-search" aria-labelledby="site-search-label">
+  <div class="site-search-header">
+    <label id="site-search-label" for="site-search-input">Search this site</label>
+    <button type="button" id="site-search-close" aria-label="Close search">Esc</button>
+  </div>
+  <input id="site-search-input" type="search" placeholder="Search pages and papers…" autocomplete="off" spellcheck="false" aria-controls="site-search-results">
+  <ul id="site-search-results" aria-label="Search results"></ul>
+  <p id="site-search-empty" hidden>No matching pages or papers.</p>
+</dialog>
+<script src="{{ '/assets/js/search-setup.js' | relative_url | bust_file_cache }}" defer></script>
+<script src="{{ '/assets/js/search-data.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script src="{{ '/assets/js/shortcut-key.js' | relative_url | bust_file_cache }}" defer></script>
