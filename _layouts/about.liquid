@@ -14,7 +14,9 @@ layout: default
         <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>
       </nav>
     </div>
-    <img class="academic-portrait" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="Dong Le" width="112" height="140" fetchpriority="high">
+    <div class="academic-portrait">
+      <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="Dong Le in Vienna" width="1536" height="2048" fetchpriority="high">
+    </div>
   </section>
   {% if page.announcements.enabled %}
     <section class="academic-section" aria-labelledby="news-heading">

@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 profile:
-  image: duc-dong-le.jpg
+  image: dong-le-vienna.jpeg
 selected_papers: true
 announcements:
   enabled: true
