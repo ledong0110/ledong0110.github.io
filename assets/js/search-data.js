@@ -42,13 +42,13 @@
     
     {
       id: "paper-le2026dont", title: "Don't Read Everything: A Curvature-Conditioned Query for Linear Attention",
-      description: "Le, Dong and Nguyen, Thong and Nguyen, Cong-Duy and Luu, Anh-Tuan · EMNLP · 2026", section: 'Publications',
+      description: "Le, Dong and Nguyen, Thong Thanh and Nguyen, Cong-Duy T and Luu, Anh Tuan · Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing · 2026", section: 'Publications',
       handler: go("/publications/#le2026dont")
     },
     
     {
       id: "paper-pham2026grace", title: "GRACE: Step-Level Benchmark for Faithful Reasoning over Context",
-      description: "Pham, Hoang and Le, Dong and Luu, Anh-Tuan · EMNLP · 2026", section: 'Publications',
+      description: "Pham, Hoang and Le, Dong and Luu, Anh Tuan · Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing · 2026", section: 'Publications',
       handler: go("/publications/#pham2026grace")
     },
     
