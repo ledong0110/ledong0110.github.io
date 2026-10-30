@@ -15,7 +15,13 @@ layout: default
       </nav>
     </div>
     <div class="academic-portrait">
-      <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="Dong Le in Vienna" width="1536" height="2048" fetchpriority="high">
+      <img
+        src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+        alt="Dong Le in Vienna"
+        width="1536"
+        height="2048"
+        fetchpriority="high"
+      >
     </div>
   </section>
   {% if page.announcements.enabled %}
