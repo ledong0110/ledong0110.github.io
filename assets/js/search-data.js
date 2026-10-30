@@ -59,6 +59,12 @@
       handler: go("/#news-heading")
     },
     
+    {
+      id: "news-best-paper",
+      title: "Don’t Read Everything: A Curvature-Conditioned Query for Linear Attention received the Best Paper Award at EMNLP 2026!", section: 'News',
+      handler: go("/#news-heading")
+    },
+    
     { id: 'cv-pdf', title: 'Download CV (PDF)', section: 'Links', handler: go("/assets/pdf/CV.pdf") },
     { id: 'email', title: 'Email Dong Le', section: 'Links', handler: go("mailto:lddongcs@gmail.com") },
     { id: 'scholar', title: 'Google Scholar', section: 'Links', handler: go("https://scholar.google.com/citations?user=nC_ERxMAAAAJ") },
